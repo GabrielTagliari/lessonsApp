@@ -22,6 +22,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/list.html',
+            controller: 'ListCtrl',
             // controller: '<someCtrl> as ctrl'
           }
         }
@@ -35,13 +36,4 @@ angular.module('main', [
           }
         }
       })
-      .state('main.debug', {
-        url: '/debug',
-        views: {
-          'pageContent': {
-            templateUrl: 'main/templates/debug.html',
-            controller: 'DebugCtrl as ctrl'
-          }
-        }
-      });
 });

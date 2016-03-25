@@ -5,18 +5,26 @@
     <ion-list>
       <ion-item
         class="item-remove-animate item-avatar item-icon-right"
-        type="item-text-wrap"
-        ui-sref="main.listDetail">
-        <img src="main/assets/images/yo@2x.png">
-          <div class="row">
-            <div class="col">.col</div>
-            <div class="col">.col</div>
-            <div class="col">.col</div>
-            <div class="col">.col</div>
-            <div class="col">.col</div>
-          </div>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+        type="item-text-wrap">
+      <div class="row">
+          <div class="col"><b>Title</b></div>
+          <div class="col"><b>Professor</b></div>
+          <div class="col"><b>Discipline</b></div>
+          <div class="col"><b>Date</b></div>
+      </div>
       </ion-item>
+        <ion-item
+          class="item-remove-animate item-avatar item-icon-right"
+          type="item-text-wrap"
+          ui-sref="main.listDetail" ng-repeat="lesson in lessons">
+          <div class="row">
+              <div class="col">{{lesson.title}}</div>
+              <div class="col">{{lesson.professor}}</div>
+              <div class="col">{{lesson.discipline}}</div>
+              <div class="col">{{lesson.date}}</div>
+            </div>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
     </ion-list>
 
   </ion-content>
